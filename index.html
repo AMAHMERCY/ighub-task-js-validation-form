@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Registration form</title>
+
+    <style>
+        body {
+            background: #00ccff;
+        }
+        
+        .wrapper {
+            position: absolute;
+            top: 5%;
+            left: 30%;
+        }
+        
+        .registration-form {
+            max-width: 950px;
+            margin: 0 auto;
+            background: black;
+            display: flex;
+            width: 100%;
+            border-radius: 30px;
+        }
+        
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px 30px 20px 30px;
+            margin-bottom: 15px;
+            padding: 20px 60px 8px 60px;
+        }
+        
+        h1 {
+            color: #00ccff;
+            border-bottom: 3px ridge cornsilk;
+        }
+        
+        .input {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px 0 0 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .btn {
+            padding: 10px 10px 10px 10px;
+            color: white;
+            background: #00ccff;
+            border-radius: 10px;
+        }
+        
+        @media screen and(max-width:600px) {
+            .registration-form {
+                flex-direction: column;
+            }
+            body {
+                background: black;
+            }
+        }
+        
+        label {
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .error-message {
+            margin-bottom: 20px;
+            padding: 0px;
+            font-size: 12px;
+            text-align: center;
+            transition: all 0.8s ease;
+            background: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myform" onsubmit="return validation()">
+        <div class="wrapper">
+            <div class="registration-form">
+                <div class="input-field">
+                    <h1>Registration form</h1>
+                    <div class="error_message"></div>
+                    <label>First name</label>
+                    <input type="text" class="input" id="firstname" placeholder="First name" required>
+                    <label>Second name</label>
+                    <input type="text" class="input" id="sname" placeholder="Second name" required>
+                    <label>Last name</label>
+                    <input type="text" class="input" id="lname" placeholder="Last name" required>
+                    <label>Email</label>
+                    <input type="email" class="input" id="email" placeholder="mercyojiiamah@gmail.com" required>
+                    <label>Phone number</label>
+                    <input type="number" class="input" id="phone" placeholder="Phone number" required>
+                    <label>Date of birth</label>
+                    <input type="date" class="input" id="dob" placeholder="Date of birth" required>
+                    <label>State of origin</label>
+                    <select name="state" class="input" id="state">
+                    <option value="ebonyi">Abia state</option>
+                    <option value="ebonyi">Ebonyi state</option>
+                    <option value="ebonyi">Sokoto state</option>
+                    <option value="ebonyi">Lagos state</option>
+                    <option value="ebonyi">Anambra state</option>
+                    <option value="ebonyi">Enugu state</option>
+                    <option value="ebonyi">Imo state</option>
+                    <option value="ebonyi">Delta state</option>
+                    <option value="ebonyi">kogi state</option>
+                    <option value="ebonyi">Osun state</option>
+                    <option value="ebonyi">Rivers state</option>
+                </select>
+                    <label>Nationality</label>
+                    <select name="nationality" class="input" id="input" required>
+                    <option value="nationality">AUS</option>
+                    <option value="nationality">Nigeria</option>
+                    <option value="nationality">Niger</option>
+                    <option value="nationality">Danish</option>
+                    <option value="nationality">Italian</option>
+                    <option value="nationality">American</option>
+                    <option value="nationality">German</option>
+                    <option value="nationality">Israel</option>
+                    <option value="nationality">Spanish</option>
+                </select>
+
+                    <button type="submit" class="btn" id="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
